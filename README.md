@@ -1,4 +1,4 @@
-# fluent-plugin-r18
+# fluent-plugin-s3-alternative
 
 ## Component
 
@@ -10,7 +10,7 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'fluent-plugin-r18'
+    gem 'fluent-plugin-s3-alternative'
 
 And then execute:
 
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install fluent-plugin-r18
+    $ gem install fluent-plugin-s3-alternative
 
 ## Contributing
 
