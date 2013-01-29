@@ -18,6 +18,10 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "fluentd"
   gem.add_development_dependency "fluent-mixin-plaintextformatter"
+  gem.add_development_dependency "aws-sdk"
+  gem.add_development_dependency "flexmock"
   gem.add_runtime_dependency "fluentd"
   gem.add_runtime_dependency "fluent-mixin-plaintextformatter"
+  gem.add_runtime_dependency "aws-sdk"
+  gem.add_runtime_dependency "flexmock"
 end
