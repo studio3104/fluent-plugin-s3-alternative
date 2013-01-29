@@ -1,10 +1,39 @@
 # fluent-plugin-s3-alternative
 
 ## Component
+### Amazon S3 output plugin for Fluentd event collector
+S3 output plugin alternative implementation.
+option other than format_json is compatible with s3 plugin.
 
-## Synopsis
+Added many format realized by fluent-mixin-plaintextfomatter mixin.
+* format whole data as serialized JSON, single attribute or separated multi attributes
+* include time as line header, or not
+* include tag as line header, or not
+* change field separator (default: TAB)
+* add new line as termination, or not
 
 ## Configuration
+
+    <match pattern>
+      type s3_alternative
+
+      aws_key_id YOUR_AWS_KEY_ID
+      aws_sec_key YOUR_AWS_SECRET/KEY
+      s3_bucket YOUR_S3_BUCKET_NAME
+      s3_endpoint s3-ap-northeast-1.amazonaws.com
+      s3_object_key_format {path}{time_slice}_{index}.{file_extension}
+      path logs/
+      buffer_path /var/log/fluent/s3
+    
+      time_slice_format %Y%m%d-%H
+      time_slice_wait 10m
+      utc
+    
+      add_new_line true
+      output_include_time false
+      output_include_tag false
+      output_data_type attr:message
+    </match>
 
 ## Installation
 
