@@ -26,8 +26,6 @@ class Fluent::S3AlternativeOutput < Fluent::TimeSlicedOutput
   end
 
   def configure(conf)
-    super
-
     if conf['path']
       if conf['path'].index('%S')
         conf['time_slice_format'] = '%Y%m%d%H%M%S'
@@ -37,6 +35,8 @@ class Fluent::S3AlternativeOutput < Fluent::TimeSlicedOutput
         conf['time_slice_format'] = '%Y%m%d%H'
       end
     end
+    
+    super
 
     if use_ssl = conf['use_ssl']
       if use_ssl.empty?
