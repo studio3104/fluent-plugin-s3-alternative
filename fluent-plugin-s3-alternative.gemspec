@@ -24,4 +24,5 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency "fluent-mixin-plaintextformatter"
   gem.add_runtime_dependency "aws-sdk"
   gem.add_runtime_dependency "flexmock"
+  gem.add_runtime_dependency "fluent-plugin-s3"
 end

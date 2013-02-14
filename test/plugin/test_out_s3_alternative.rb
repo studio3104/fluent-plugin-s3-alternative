@@ -15,6 +15,9 @@ class S3AlternativeOutputTest < Test::Unit::TestCase
 
   def test_format_plaintext
     d1 = create_driver %[
+      aws_key_id test_key_id
+      aws_sec_key test_sec_key
+      s3_bucket test_bucket
       buffer_type memory
       add_new_line true
       output_include_time false

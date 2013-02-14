@@ -25,6 +25,7 @@ unless ENV.has_key?('VERBOSE')
   $log = nulllogger
 end
 
+require 'fluent/plugin/out_s3'
 require 'fluent/plugin/out_s3_alternative'
 
 class Test::Unit::TestCase
